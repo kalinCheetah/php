@@ -1,5 +1,11 @@
 <?php
 
+/*
+ *  Данный класс инкапсулирует данные, относящиеся к заказу и методы для работы с этой сущностью
+ *  Два public-метода для работы с классом извне (попытка забронировать и подтверждение брони) по большей части
+ *  закомментированны, поскольку выполняют запросы через curl на несуществующие адреса. При подстановке правильного URL 
+ *  код будет работать.
+*/
 class Order {
     public function __construct($event_id, $event_date, $ticket_adult_price, $ticket_adult_qunatity, $ticket_kid_price, $ticket_kid_quantity) {
         $this->event_id = $event_id;
